@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine.AI; 
+using UnityEngine.AI;
 
 namespace GoneHome
 {
@@ -12,7 +12,7 @@ namespace GoneHome
 
         private NavMeshAgent agent;
 
-        
+
         void Start()
         {
             agent = GetComponent<NavMeshAgent>();
