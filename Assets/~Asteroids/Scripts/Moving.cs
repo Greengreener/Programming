@@ -4,48 +4,51 @@ using UnityEngine;
 
 // Clean Code: CTRL + K + D (in that order)
 
-    // {} - Braces
-    // [] - Brackets
-    // () - Parentesis
+// {} - Braces
+// [] - Brackets
+// () - Parentesis
 
-public class Moving : MonoBehaviour
+namespace Asteroids
 {
-    public float rotationSpeed = 360;
-    public float movementSpeed = 10;
-    public float movementSpeedback = 5;
-
-    void Movement()
+    public class Moving : MonoBehaviour
     {
-        if (Input.GetKey(KeyCode.UpArrow))
-                {
-                    transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
-                }
+        public float rotationSpeed = 360;
+        public float movementSpeed = 2;
+        public float movementSpeedback = 2;
 
-        if (Input.GetKey(KeyCode.DownArrow))
-                {
-                    transform.Translate(Vector3.down * movementSpeedback * Time.deltaTime);
-                }
+        void Movement()
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
+            }
 
-     
-    }
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(Vector3.down * movementSpeedback * Time.deltaTime);
+            }
 
-    void Rotation()
-    {
-        if (Input.GetKey(KeyCode.RightArrow))
-                {
-                    transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
-                }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
-                {
-                    transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
-                }
-    }
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Movement();
-        Rotation();
+        void Rotation()
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+            }
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            Movement();
+            Rotation();
+        }
     }
 }
