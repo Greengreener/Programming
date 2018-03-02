@@ -7,14 +7,18 @@ namespace GoneHome
     public class Player : MonoBehaviour
     {
 
-        public float movementSpeed = 10f;
+        public float acceleration = 20f;
+        public float maxVelocity = 10f;
 
         private Rigidbody rigid;
+        private Vector3 spawnPoint;
 
         // Use this for initialization
         void Start()
         {
             rigid = GetComponent<Rigidbody>();
+
+            spawnPoint = transform.position;
         }
 
         // Update is called once per frame
@@ -25,9 +29,17 @@ namespace GoneHome
 
             Vector3 inputDir = new Vector3(inputH, 0, inputV);
 
-            Vector3 position = transform.position;
-            position += inputDir * movementSpeed * Time.deltaTime;
-            rigid.MovePosition(position);
+            rigid.AddForce(inputDir * acceleration);
+
+            if(rigid.velocity.magnitude > maxVelocity)
+            {
+                rigid.velocity = rigid.velocity.normalized * maxVelocity;
+            }
+        }
+
+        public void Reset()
+        {
+            transform.position = spawnPoint;
         }
     }
 }
