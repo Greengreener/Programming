@@ -7,8 +7,9 @@ namespace GoneHome
     public class Player : MonoBehaviour
     {
 
-        public float acceleration = 20f;
-        public float maxVelocity = 10f;
+        public float acceleration = 10f;
+        public float maxVelocity = 20f;
+        public GameObject deathParticles;
 
         private Rigidbody rigid;
         private Vector3 spawnPoint;
@@ -29,6 +30,9 @@ namespace GoneHome
 
             Vector3 inputDir = new Vector3(inputH, 0, inputV);
 
+            Transform cam = Camera.main.transform;
+            inputDir = Quaternion.AngleAxis(cam.eulerAngles.y, Vector3.up) * inputDir;
+
             rigid.AddForce(inputDir * acceleration);
 
             if(rigid.velocity.magnitude > maxVelocity)
@@ -39,7 +43,10 @@ namespace GoneHome
 
         public void Reset()
         {
+            GameObject clone = Instantiate(deathParticles);
+            clone.transform.position = transform.position;
             transform.position = spawnPoint;
+            rigid.velocity = Vector3.zero;
         }
     }
 }
