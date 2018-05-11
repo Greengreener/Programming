@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +13,7 @@ namespace GoneHome
 
         private Vector3 spawnPoint;
 
+        // Use this for initialization
         void Start()
         {
             agent = GetComponent<NavMeshAgent>();
@@ -27,7 +27,7 @@ namespace GoneHome
             agent.SetDestination(target.position);
         }
 
-        internal void Reset()
+        public void Reset()
         {
             agent.enabled = false;
             transform.position = spawnPoint;

@@ -6,48 +6,52 @@ using UnityEngine;
 
 // {} - Braces
 // [] - Brackets
-// () - Parentesis
-
+// () - Parenthesis
 namespace Asteroids
 {
     public class Moving : MonoBehaviour
     {
-        public float rotationSpeed = 360;
-        public float movementSpeed = 2;
-        public float movementSpeedback = 2;
+        // Member Variables
+        public float rotationSpeed;
+        public float movementSpeed;
 
         void Movement()
         {
-            if (Input.GetKey(KeyCode.W))
+            // Move up
+            if (Input.GetKey(KeyCode.UpArrow))
             {
+                // Move the player up by movementSpeed
+                //Vector3 position = transform.position;
+                //position.y += movementSpeed * Time.deltaTime;
+                //transform.position = position;
                 transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
             }
 
-            if (Input.GetKey(KeyCode.S))
+            // Move down
+            if (Input.GetKey(KeyCode.DownArrow))
             {
-                transform.Translate(Vector3.down * movementSpeedback * Time.deltaTime);
+                transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
             }
-
-
         }
 
         void Rotation()
         {
-            if (Input.GetKey(KeyCode.D))
+            // Rotate Right
+            if (Input.GetKey(KeyCode.RightArrow))
             {
                 transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
             }
-
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
-            }
         }
+
+        // TASK: Make a 'Rotation()' function and put rotation code in it
 
         // Update is called once per frame
         void Update()
         {
+            // Call 'Movement()' function
             Movement();
+
+            // Call 'Rotation()' function
             Rotation();
         }
     }
