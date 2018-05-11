@@ -18,7 +18,7 @@ namespace Asteroids
         void Movement()
         {
             // Move up
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W))
             {
                 // Move the player up by movementSpeed
                 //Vector3 position = transform.position;
@@ -28,18 +28,22 @@ namespace Asteroids
             }
 
             // Move down
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
-            }
+            //if (Input.GetKey(KeyCode.DownArrow))
+            //{
+            //transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
+            //}
         }
 
         void Rotation()
         {
             // Rotate Right
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.D))
             {
                 transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
             }
         }
 
