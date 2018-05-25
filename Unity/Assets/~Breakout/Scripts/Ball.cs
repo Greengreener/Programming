@@ -14,6 +14,7 @@ namespace Breakout
         public void Fire(Vector3 direction)
         {
             velocity = direction * speed;
+
         }
 
         void OnCollisionEnter2D(Collision2D other)
