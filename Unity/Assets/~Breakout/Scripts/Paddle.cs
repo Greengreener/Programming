@@ -7,8 +7,15 @@ namespace Breakout
 {
     public class Paddle : MonoBehaviour
     {
-
-        public float movementSpeed = 20f;
+        /*
+         int        whole number 1
+         float      decimal number 0.28596325474
+         string     symbols 25 kLOp@3>/} :`!
+         bool       TRUE OR FALSE two states on or off, yes or no 
+         */
+        //away to check if we have fired
+        public bool fired; //if you dont declare the start value its false
+        public float movementSpeed = 10f;
         public Ball currentBall;
         public Vector2[] directions = new Vector2[]
         {
@@ -27,14 +34,21 @@ namespace Breakout
             currentBall.transform.SetParent(null);
             Vector3 randomDir = directions[Random.Range(0, directions.Length)];
             currentBall.Fire(randomDir);
+            //set that we have fired
+            fired = true;
         }
 
         void CheckInput()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            //only fire if we havent fired yet
+            if (!fired)/*fired == false*/ // checks if the ball has been fired - if not 
             {
-                Fire();
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Fire();
+                }
             }
+           
         }
 
         void Movement()

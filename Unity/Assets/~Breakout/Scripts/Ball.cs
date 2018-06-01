@@ -7,7 +7,7 @@ namespace Breakout
 {
     public class Ball : MonoBehaviour
     {
-        public float speed = 5f;
+        public float speed = 2.5f;
 
         private Vector3 velocity;
 
