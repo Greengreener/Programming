@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Platform.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -142,6 +143,8 @@
     <Compile Include="Assets\~AHundredBalls\Scripts\Bucket.cs" />
     <Compile Include="Assets\~AHundredBalls\Scripts\Paddle.cs" />
     <Compile Include="Assets\~AHundredBalls\Scripts\Spawner.cs" />
+    <Compile Include="Assets\~Assessment1\Scripts\Platform.cs" />
+    <Compile Include="Assets\~Assessment1\Scripts\PlayerController.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\AsteroidSpawner.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\Moving.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\Shooting.cs" />
