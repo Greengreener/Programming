@@ -7,12 +7,8 @@ namespace Assessment1
 {
     public class Player_movement : MonoBehaviour
     {
-        public float movementSpeed = 10f;
-        public Vector2[] directions = new Vector2[]
-            {
-        new Vector2(-1, 1f),
-        new Vector2(1f,1f)
-            };
+        public float movementSpeed = 0.1f;
+        
 
         // Use this for initialization
         void Start()
@@ -22,17 +18,22 @@ namespace Assessment1
 
         void Movement()
         {
-            float inputH = Input.GetAxis("Horizontal");
-            Vector3 force = transform.right * inputH;
-            force *= movementSpeed;
-            force *= Time.deltaTime;
-            transform.position += force;
+            // Move right
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(Vector2.right * movementSpeed * Time.deltaTime);
+            }
+            // Move right
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(Vector2.left * movementSpeed * Time.deltaTime);
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-
+            Movement();
         }
     }
 }
