@@ -33,7 +33,7 @@ namespace Breakout
         {
             currentBall.transform.SetParent(null);
             Vector3 randomDir = directions[Random.Range(0, directions.Length)];
-            currentBall.Fire(randomDir);
+            currentBall.Fire(randomDir); //Fires in a random direction
             //set that we have fired
             fired = true;
         }
