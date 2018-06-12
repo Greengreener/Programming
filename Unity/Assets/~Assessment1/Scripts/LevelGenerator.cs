@@ -7,6 +7,7 @@ namespace Assessment1{
     public class LevelGenerator : MonoBehaviour {
 
         public GameObject platformPrefab;
+		public GameObject jumpPlatformPrefab;
 
         public int numberOfPlatforms = 200;
         public float levelWidth = 3f;
@@ -24,11 +25,6 @@ namespace Assessment1{
                 spawnPosition.x = Random.Range(-levelWidth, levelWidth);
                 Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
             }
-        }
-
-        // Update is called once per frame
-        void Update() {
-
         }
     }
 }

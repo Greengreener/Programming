@@ -8,7 +8,7 @@ namespace Assessment1
     public class Platform : MonoBehaviour
     {
 
-        public float jumpForce = 30f;
+        public float jumpForce = 10f;
 
        void OnCollisionEnter2D(Collision2D coll) // Detects collisions entering and forces detected collision to "Jump up"
         {
