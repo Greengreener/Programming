@@ -8,13 +8,6 @@ namespace Assessment1
     public class Player_movement : MonoBehaviour
     {
         public float movementSpeed = 0.1f;
-        
-
-        // Use this for initialization
-        void Start()
-        {
-
-        }
 
         void Movement()
         {
@@ -29,8 +22,6 @@ namespace Assessment1
                 transform.Translate(Vector2.left * movementSpeed * Time.deltaTime);
             }
         }
-
-        // Update is called once per frame
         void Update()
         {
             Movement();

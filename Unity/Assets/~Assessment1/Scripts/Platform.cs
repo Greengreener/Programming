@@ -10,7 +10,7 @@ namespace Assessment1
 
         public float jumpForce = 30f;
 
-       void OnCollisionEnter2D(Collision2D coll)
+       void OnCollisionEnter2D(Collision2D coll) // Detects collisions entering and forces detected collision to "Jump up"
         {
             if (coll.relativeVelocity.y >= 0f)
             {
