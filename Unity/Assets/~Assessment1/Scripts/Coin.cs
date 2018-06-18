@@ -34,7 +34,7 @@ namespace Assessment1
 				}
 			if (coin.gameObject.tag == "Death") // Detect if collider has the block tag
 			{
-				SceneManager.LoadScene(4);
+				SceneManager.LoadScene(2);
 
 			}
 
