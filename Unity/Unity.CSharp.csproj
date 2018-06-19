@@ -139,6 +139,7 @@
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileObject.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
+    <Compile Include="Assets\loadSceneOnClick.cs" />
     <Compile Include="Assets\~AHundredBalls\Scripts\Balls.cs" />
     <Compile Include="Assets\~AHundredBalls\Scripts\Bucket.cs" />
     <Compile Include="Assets\~AHundredBalls\Scripts\Paddle.cs" />
@@ -149,6 +150,8 @@
     <Compile Include="Assets\~Assessment1\Scripts\JumpLevelGenerator.cs" />
     <Compile Include="Assets\~Assessment1\Scripts\JumpPlatform.cs" />
     <Compile Include="Assets\~Assessment1\Scripts\LevelGenerator.cs" />
+    <Compile Include="Assets\~Assessment1\Scripts\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\~Assessment1\Scripts\LoadStartScene.cs" />
     <Compile Include="Assets\~Assessment1\Scripts\Platform.cs" />
     <Compile Include="Assets\~Assessment1\Scripts\Player_movement.cs" />
     <Compile Include="Assets\~Assessment1\Scripts\startButton.cs" />
