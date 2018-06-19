@@ -32,9 +32,11 @@ namespace Assessment1
 					Destroy (coin.gameObject); //Destroys the coin
 					counter++; // Adds to the counter
 				}
-			if (coin.gameObject.tag == "Death") // Detect if collider has the block tag
+			if (coin.gameObject.tag == "Death") // Detect if collider has the Death tag
 			{
-				SceneManager.LoadScene(2);
+
+				SceneManager.LoadScene(2); // Sends to the menu scene
+
 
 			}
 
